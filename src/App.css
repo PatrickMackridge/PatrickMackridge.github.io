@@ -1,16 +1,15 @@
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+  font-family: "Lucida Grande";
+  /* font-family: Geneva; */
+  background: radial-gradient(
+    ellipse,
+    rgb(190, 235, 245) 50%,
+    rgb(160, 205, 215) 80%,
+    rgb(135, 180, 190) 95%,
+    rgb(100, 150, 160) 100%
+  );
+  height: 100vh;
 }
 
 .App-header {
@@ -24,15 +23,151 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+h1 {
+  font-size: 5vw;
+  color: darkslategray;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+nav {
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+  font-size: 18px;
+  background-color: slategrey;
+  padding: 2% 0;
+  opacity: 0.5;
+}
+
+.nav-text,
+a:visited,
+a:link,
+a:active {
+  color: whitesmoke;
+  font-size: xx-large;
+  text-decoration: none;
+}
+
+a:hover {
+  color: rgb(17, 69, 32);
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  margin: 2% 0;
+}
+
+.subheading {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  font-size: 2vw;
+  text-decoration: underline;
+  bottom: 15px;
+}
+
+.introText {
+  grid-column-start: 2;
+  font-size: 105%;
+}
+
+.exp {
+  display: flex;
+  flex-direction: column;
+  font-size: 105%;
+}
+
+.mainText {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  width: 75%;
+  font-size: 1.5vw;
+  position: relative;
+  top: 8px;
+}
+
+.projectPane {
+  display: grid;
+  grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+  justify-items: center;
+  min-height: 100%;
+}
+
+.projectBox {
+  display: grid;
+  grid-template-columns: 50%, 50%;
+  justify-content: stretch;
+  border-color: black;
+  border-style: double;
+  width: 90%;
+  margin: 5% 0;
+}
+
+.proj-name {
+  display: flex;
+  justify-content: center;
+}
+
+.proj-desc {
+  grid-column-start: 2;
+  display: flex;
+}
+
+label {
+  font-size: 16px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+input {
+  width: 25%;
+  padding: 5px 5px;
+  font-size: 16px;
+}
+
+#myName {
+  margin-left: 5%;
+}
+
+#message {
+  display: inline-block;
+  width: 40%;
+  height: 150px;
+  padding: 5px 5px;
+  font-size: 16px;
+  resize: none;
+}
+
+.mePictureInfo {
+  display: grid;
+  grid-template-columns: 2% 1fr 45% 1fr 2%;
+  justify-items: center;
+}
+
+.mePicture {
+  max-width: 70%;
+  max-height: auto;
+  border-radius: 50%;
+  margin: 0 5.2% 0 0;
+}
+
+@media screen and (max-width: 1075px) {
+  .subheading {
+    font-size: 22px;
   }
-  to {
-    transform: rotate(360deg);
+  .mainText {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  h1 {
+    font-size: 40px;
   }
 }
