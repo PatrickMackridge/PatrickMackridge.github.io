@@ -17,9 +17,8 @@ const HomePage = () => {
         <img src={mePicture} class="mePicture" alt="Me" />
         <ul class="exp">
           <h3>Experience</h3>
-          <li>Data Production Analyst: June 2018 - Jan 2020</li>
-          <br />
           <li>Northcoders Bootcamp: Jan 2020 - April 2020</li>
+          <li>Data Production Analyst: June 2018 - Jan 2020</li>
         </ul>
       </div>
     </>

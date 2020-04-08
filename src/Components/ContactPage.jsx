@@ -1,36 +1,139 @@
 import React, { Component } from "react";
+import emailjs from "emailjs-com";
 
 class ContactPage extends Component {
+  state = {
+    name: "",
+    message: "",
+    emailAddress: "",
+    response: "",
+    showResponse: false,
+    sending: false,
+  };
+
+  sendEmail = () => {
+    const { name, message, emailAddress } = this.state;
+    const regex = /\S+@\S+\.\S+/;
+    if (regex.test(emailAddress)) {
+      const template_params = {
+        name: name,
+        message: message,
+        email: emailAddress,
+      };
+      emailjs
+        .send(
+          "gmail",
+          "contactemail",
+          template_params,
+          "user_BgQ01PRjvRYfs2HeS7tb0"
+        )
+        .then(() => {
+          this.setState({
+            name: "",
+            message: "",
+            emailAddress: "",
+            response: "Thanks for getting in touch!",
+            showResponse: true,
+            sending: false,
+          });
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+      this.setState({
+        showResponse: false,
+        sending: true,
+      });
+    } else {
+      this.setState({
+        showResponse: true,
+        response: "Please provide a valid email address",
+      });
+    }
+  };
+
+  handleChange = (field, value) => {
+    this.setState({ [field]: value });
+  };
+
+  handleSubmit = (event) => {
+    const { name, message, emailAddress } = this.state;
+    event.preventDefault();
+    if (name !== "" && message !== "" && emailAddress !== "") {
+      this.sendEmail();
+    } else {
+      this.setState({
+        response: "Please complete all fields",
+        showResponse: true,
+      });
+    }
+  };
+
   render() {
+    const {
+      name,
+      message,
+      emailAddress,
+      showResponse,
+      response,
+      sending,
+    } = this.state;
     return (
       <>
-        <h1 class="title">Contact</h1>
-        <form>
-          <label for="name" class="label">
-            Name:
-          </label>
-          <br />
-          <input
-            type="text"
-            id="formName"
-            name="name"
-            placeholder="Your name.."
-          />
-          <br />
-          <label for="message" class="label">
-            Message:
-          </label>
-          <br />
-          <textarea
-            name="message"
-            id="message"
-            cols="30"
-            rows="30"
-            placeholder="Your message here.."
-          ></textarea>
-          <br />
-          <input type="submit" value="Submit" />
-        </form>
+        <h1 className="title">Contact</h1>
+        {sending ? (
+          <p>Sending email, please wait...</p>
+        ) : (
+          <form onSubmit={this.handleSubmit}>
+            <label className="name">
+              Name:
+              <br />
+              <textarea
+                name="name"
+                id="formName"
+                cols="22"
+                rows="1"
+                placeholder="Your name.."
+                value={name}
+                onChange={(event) => {
+                  this.handleChange(event.target.name, event.target.value);
+                }}
+              />
+            </label>
+            <label className="emailAddress">
+              Email:
+              <br />
+              <textarea
+                name="emailAddress"
+                id="formEmail"
+                cols="22"
+                rows="1"
+                placeholder="Your email.."
+                value={emailAddress}
+                onChange={(event) => {
+                  this.handleChange(event.target.name, event.target.value);
+                }}
+              />
+            </label>
+            <label className="message">
+              Get in touch:
+              <br />
+              <textarea
+                name="message"
+                id="message"
+                cols="66"
+                rows="10"
+                placeholder="Ask me a question about anything, or just say hi!"
+                value={message}
+                onChange={(event) => {
+                  this.handleChange(event.target.name, event.target.value);
+                }}
+              ></textarea>
+            </label>
+            <input type="submit" value="Submit" />
+          </form>
+        )}
+        {showResponse ? <p className="response">{response}</p> : null}
       </>
     );
   }

@@ -1,7 +1,7 @@
 .App {
   text-align: center;
-  font-family: "Lucida Grande";
-  /* font-family: Geneva; */
+  /* font-family: "Lucida Grande"; */
+  font-family: Geneva;
   background: radial-gradient(
     ellipse,
     rgb(190, 235, 245) 50%,
@@ -9,7 +9,7 @@
     rgb(135, 180, 190) 95%,
     rgb(100, 150, 160) 100%
   );
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .App-header {
@@ -24,7 +24,7 @@
 }
 
 h1 {
-  font-size: 5vw;
+  font-size: 4vw;
   color: darkslategray;
 }
 
@@ -42,7 +42,7 @@ nav {
 a:visited,
 a:link,
 a:active {
-  color: whitesmoke;
+  color: white;
   font-size: xx-large;
   text-decoration: none;
 }
@@ -54,7 +54,7 @@ a:hover {
 .title {
   display: flex;
   justify-content: center;
-  margin: 2% 0;
+  margin: 1% 0;
 }
 
 .subheading {
@@ -99,10 +99,12 @@ a:hover {
   display: grid;
   grid-template-columns: 50%, 50%;
   justify-content: stretch;
-  border-color: black;
-  border-style: double;
+  background-color: rgba(0, 130, 172, 0.701);
+  color: white;
+  border: 3px double black;
   width: 90%;
   margin: 5% 0;
+  font-weight: bold;
 }
 
 .proj-name {
@@ -123,11 +125,11 @@ form {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
 }
+
 input {
-  width: 25%;
-  padding: 5px 5px;
+  padding: 5px;
+  margin: 5px;
   font-size: 16px;
 }
 
@@ -135,13 +137,19 @@ input {
   margin-left: 5%;
 }
 
-#message {
-  display: inline-block;
-  width: 40%;
-  height: 150px;
-  padding: 5px 5px;
+textarea {
+  resize: none;
   font-size: 16px;
   resize: none;
+  padding: 5px 5px;
+}
+
+.response {
+  margin: 0;
+}
+
+#message {
+  display: inline-block;
 }
 
 .mePictureInfo {
@@ -157,16 +165,7 @@ input {
   margin: 0 5.2% 0 0;
 }
 
-@media screen and (max-width: 1075px) {
-  .subheading {
-    font-size: 22px;
-  }
-  .mainText {
-    font-size: 16px;
-  }
-}
-
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 768px) {
   h1 {
     font-size: 40px;
   }
