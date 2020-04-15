@@ -1,26 +1,12 @@
-.App {
+body {
   text-align: center;
-  /* font-family: "Lucida Grande"; */
   font-family: Geneva;
-  background: radial-gradient(
-    ellipse,
-    rgb(190, 235, 245) 50%,
-    rgb(160, 205, 215) 80%,
-    rgb(135, 180, 190) 95%,
-    rgb(100, 150, 160) 100%
+  background: linear-gradient(
+    rgba(148, 182, 210, 1) 40%,
+    rgba(154, 154, 164, 1) 85%,
+    rgba(79, 112, 143, 1) 100%
   );
   min-height: 100vh;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
 h1 {
@@ -33,22 +19,21 @@ nav {
   justify-content: space-around;
   list-style-type: none;
   font-size: 18px;
-  background-color: slategrey;
-  padding: 2% 0;
-  opacity: 0.5;
+  background-color: rgba(110, 58, 36, 0.75);
+  padding: 1%;
 }
 
 .nav-text,
 a:visited,
 a:link,
 a:active {
-  color: white;
+  color: rgb(200, 200, 227);
   font-size: xx-large;
   text-decoration: none;
 }
 
 a:hover {
-  color: rgb(17, 69, 32);
+  color: rgba(123, 126, 141, 1);
 }
 
 .title {
@@ -92,29 +77,52 @@ a:hover {
   display: grid;
   grid-template: repeat(2, 1fr) / repeat(2, 1fr);
   justify-items: center;
-  min-height: 100%;
+  height: 75vh;
+  overflow-y: auto;
 }
 
 .projectBox {
-  display: grid;
-  grid-template-columns: 50%, 50%;
-  justify-content: stretch;
-  background-color: rgba(0, 130, 172, 0.701);
-  color: white;
-  border: 3px double black;
+  /* display: grid;
+  grid-template-rows: 15% 70% 15%; */
+  background-color: rgba(79, 112, 143, 1);
+  color: whitesmoke;
+  border: 2px double rgba(123, 126, 141, 1);
+  border-radius: 5px;
   width: 90%;
-  margin: 5% 0;
-  font-weight: bold;
+  margin: 2% 0;
+  box-shadow: 0 0 5px black;
 }
 
 .proj-name {
   display: flex;
   justify-content: center;
+  align-items: center;
+  border-bottom: 1px dashed rgba(148, 182, 210, 1);
+  padding: 1%;
+  margin: 0;
+  font-weight: bold;
 }
 
 .proj-desc {
-  grid-column-start: 2;
   display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.9em;
+  margin: 0;
+  padding: 1%;
+  height: 65%;
+}
+
+.proj-links {
+  display: flex;
+  justify-content: space-evenly;
+  border-top: 1px dashed rgba(148, 182, 210, 1);
+  padding: 0.5% 0 1%;
+}
+
+.proj-links a {
+  font-size: 0.9em;
+  margin: 0 1%;
 }
 
 label {
@@ -133,15 +141,12 @@ input {
   font-size: 16px;
 }
 
-#myName {
-  margin-left: 5%;
-}
-
 textarea {
   resize: none;
   font-size: 16px;
   resize: none;
   padding: 5px 5px;
+  background-color: rgb(230, 230, 220);
 }
 
 .response {
@@ -159,10 +164,14 @@ textarea {
 }
 
 .mePicture {
-  max-width: 70%;
-  max-height: auto;
+  /* max-width: 30vw;
+  max-height: 75vh;
+  width: auto;
+  height: auto; */
+  width: 30vw;
+  height: 75vh;
+  object-fit: cover;
   border-radius: 50%;
-  margin: 0 5.2% 0 0;
 }
 
 @media screen and (max-width: 768px) {
