@@ -80,6 +80,7 @@ class ContactPage extends Component {
     } = this.state;
     return (
       <>
+        {showResponse ? <p className="response">{response}</p> : null}
         <h1 className="title">Contact</h1>
         {sending ? (
           <p>Sending email, please wait...</p>
@@ -87,11 +88,9 @@ class ContactPage extends Component {
           <form onSubmit={this.handleSubmit}>
             <label className="name">
               Name:
-              <br />
               <textarea
                 name="name"
                 id="formName"
-                cols="22"
                 rows="1"
                 placeholder="Your name.."
                 value={name}
@@ -102,11 +101,9 @@ class ContactPage extends Component {
             </label>
             <label className="emailAddress">
               Email:
-              <br />
               <textarea
                 name="emailAddress"
                 id="formEmail"
-                cols="22"
                 rows="1"
                 placeholder="Your email.."
                 value={emailAddress}
@@ -115,25 +112,23 @@ class ContactPage extends Component {
                 }}
               />
             </label>
-            <label className="message">
-              Get in touch:
-              <br />
-              <textarea
-                name="message"
-                id="message"
-                cols="66"
-                rows="10"
-                placeholder="Ask me a question about anything, or just say hi!"
-                value={message}
-                onChange={(event) => {
-                  this.handleChange(event.target.name, event.target.value);
-                }}
-              ></textarea>
-            </label>
-            <input type="submit" value="Submit" />
+            <div className="message-container">
+              <label className="message">
+                Get in touch:
+                <textarea
+                  name="message"
+                  id="message"
+                  placeholder="Ask me a question about anything, or just say hi!"
+                  value={message}
+                  onChange={(event) => {
+                    this.handleChange(event.target.name, event.target.value);
+                  }}
+                ></textarea>
+              </label>
+            </div>
+            <input type="submit" value="Submit" className="submitBtn" />
           </form>
         )}
-        {showResponse ? <p className="response">{response}</p> : null}
       </>
     );
   }

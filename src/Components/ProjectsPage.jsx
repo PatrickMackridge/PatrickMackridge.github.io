@@ -27,10 +27,10 @@ const ProjectsPage = () => {
           </div>
         </div>
         <div class="projectBox">
-          <p class="proj-name">Browser Beat</p>
+          <p class="proj-name">Browser Beats</p>
           <p class="proj-desc">{projectInfo.browserBeat.desc}</p>
           <div class="proj-links">
-            <a href={projectInfo.browserBeat.hosted}>App</a>
+            <a href={projectInfo.browserBeat.hosted}>Make Music</a>
             <a href={projectInfo.browserBeat.repo}>GitHub repo</a>
           </div>
         </div>

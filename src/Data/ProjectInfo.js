@@ -16,7 +16,8 @@ const projectInfo = {
     beHosted: "https://patrick-mackridge-nc-news.herokuapp.com/api",
   },
   browserBeat: {
-    desc: "Banging Browser Based Beats 'n' Bass!",
+    desc:
+      "Banging browser based Beats 'n' Bass! This project uses the Tone.js library to create 2 fully functioning musical synths/sequencers - one bass and one drums - allowing you to make music to your heart's content straight from your internet browser! The CSS design is a nod to a pair of classic electronic instruments from the past. Click on the link to get those grooves going or get on the GitHub repo.",
     hosted: "",
     repo: "https://github.com/PatrickMackridge/browser-beats",
   },
