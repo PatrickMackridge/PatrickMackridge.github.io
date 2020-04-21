@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/static/css/main.cf183d93.chunk.css",
+    "main.js": "/static/js/main.3d62909c.chunk.js",
+    "main.js.map": "/static/js/main.3d62909c.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.e1e3e45e.js",
+    "runtime-main.js.map": "/static/js/runtime-main.e1e3e45e.js.map",
+    "static/js/2.d3340a35.chunk.js": "/static/js/2.d3340a35.chunk.js",
+    "static/js/2.d3340a35.chunk.js.map": "/static/js/2.d3340a35.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.bcde5c765c133e1e350cc482d9512814.js": "/precache-manifest.bcde5c765c133e1e350cc482d9512814.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.cf183d93.chunk.css.map": "/static/css/main.cf183d93.chunk.css.map",
+    "static/js/2.d3340a35.chunk.js.LICENSE.txt": "/static/js/2.d3340a35.chunk.js.LICENSE.txt",
+    "static/media/MeOnnaLake.jpeg": "/static/media/MeOnnaLake.fb21ae67.jpeg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e1e3e45e.js",
+    "static/js/2.d3340a35.chunk.js",
+    "static/css/main.cf183d93.chunk.css",
+    "static/js/main.3d62909c.chunk.js"
+  ]
+}
