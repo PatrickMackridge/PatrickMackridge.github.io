@@ -1,4 +1,4 @@
 const introText =
-  " A person with a website cos I'm cool. Write more stuff here about me. There's a picture of me. Have a look around at my projects. Get in touch via contacts page etc etc.Say some more stuff, get an idea of space within the box...";
+  "Hi, I'm Patrick. I'm a full stack software developer who recently graduated from the Northcoders coding bootcamp - and this is my website! Head over to the projects page to see the various projects I am either working on or have previously worked on. From there you can click through to the applications themselves, or check out their GitHub repos. If you want to know anything more about me or my projects you can get in touch via the contact page and I'll get back to you as soon as I can. Thanks!";
 
 export default introText;

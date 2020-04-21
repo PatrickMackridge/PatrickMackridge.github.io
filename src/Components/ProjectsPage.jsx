@@ -10,8 +10,7 @@ const ProjectsPage = () => {
           <p class="proj-name">Wormplay</p>
           <p class="proj-desc">{projectInfo.wormplay.desc}</p>
           <div class="proj-links">
-            <a href={projectInfo.wormplay.feHosted}>Hosted</a>
-            <a href={projectInfo.wormplay.beHosted}>API</a>
+            <a href={projectInfo.wormplay.hosted}>Enter The Worm!</a>
             <a href={projectInfo.wormplay.feRepo}>FE-Repo</a>
             <a href={projectInfo.wormplay.beRepo}>BE-Repo</a>
           </div>

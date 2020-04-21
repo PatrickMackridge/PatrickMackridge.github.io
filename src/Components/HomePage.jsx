@@ -10,7 +10,11 @@ const HomePage = () => {
       </h1>
       <div class="homePageInfo">
         <p class="introText">{introText}</p>
-        <img src={mePicture} class="mePicture" alt="Me" />
+        <img
+          src={mePicture}
+          class="mePicture"
+          alt="Me standing on a frozen Norwegian lake"
+        />
         <ul class="exp">
           <h3>Experience</h3>
           <li>Northcoders Bootcamp: Jan 2020 - April 2020</li>

@@ -2,10 +2,9 @@ const projectInfo = {
   wormplay: {
     desc:
       "Wormplay is an online browser based game with realtime two player interaction! It was built by me and 3 other northcoders students as our final project. In it, players try to spell the highest scoring word possible by dragging and dropping letters onto a moving worm with their opponents face! Click the link below to take the worm for a whirl! (or check out the repos on GitHub)",
-    feRepo: "",
-    beRepo: "",
-    feHosted: "",
-    beHosted: "",
+    hosted: "",
+    feRepo: "https://github.com/chicorycolumn/wormplay-FE",
+    beRepo: "https://github.com/nadiarashad/wormplay-BE",
   },
   ncNews: {
     desc:
